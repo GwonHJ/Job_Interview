@@ -6,7 +6,7 @@ Algorithm
 BFS&DFS
 이분탐색
 
-Operation System
+# Operation System
 ## Process(프로세스)
 
 **프로세스 VS 프로그램**
