@@ -1,8 +1,7 @@
-# Job_Interview
-면접대비용
+# Job_Interview 직무면접 대비용
 
 -------------------------------------------------
-# 1.Operation System
+# 1. Operation System
 ## Process(프로세스)
 
 **프로세스 VS 프로그램**
@@ -58,7 +57,10 @@ Context Switching은 많은 비용이 소모된다.
 - Memory mapping 초기화
 - 커널은 항상 실행되어야 한다.
 Context Switching의 비용은 프로세스가 스레드보다 더 많이 든다.
+
 이유 : 스레드는 Stack 영역을 제외한 모든 메모리를 공유하기 때문에 Context Switching 발생시 Stack 영역만 변경을 진행하면 되기 때문이다
+
+## 동기화
 
 **프로세스 동기화(매우 중요 ⭐⭐⭐)**
 
