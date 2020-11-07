@@ -373,6 +373,8 @@ bool visited[N];
   
 # 3. 객체지향 Vs 절차지향
 
+출처: https://demoversion.tistory.com/13 [Demoversion]
+
 ## 객체지향
 
 1. 프로그램을 단순히 데이터와 처리 방법으로 나누는 것이 아니라, 프로그램을 수많은 '객체'라는 기본 단위로 나누고 이 객체들의 상호작용ㅇ으로 서술하는 방식
@@ -386,8 +388,6 @@ bool visited[N];
 
 
 3. 장단점 : 상속(편리하지만 구조가 이상하게 변할 수있음), 인스턴스에 데이터 접근 불가, 새로운 데이터 형식을 정의할 수 있게 해줌
-
-출처: https://demoversion.tistory.com/13 [Demoversion]
 
 ## 절차지향
 
