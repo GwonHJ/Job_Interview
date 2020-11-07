@@ -86,10 +86,15 @@ counter = register
 but,
 
 register1 = counter	register1 = 5
+
 register2 = counter	register2 = 5
+
 register 1 = register1 + 1	register1 = 6
+
 register 2 = register2 - 1	register2 = 4
+
 counter = register1	counter = 6
+
 counter = register2	counter = 4
 
 위와 같이 잘못된 결과가 나올 수 있음. 이를 해결하기 위해서 동기화가 필요로 함.
@@ -97,6 +102,7 @@ counter = register2	counter = 4
 critical section(임계 영역) : 공유되는 자원에서 문제가 발생하지 않도록 독점을 보장해주는 영역
 
 concurrent : multiprogram 하나의 CPU로 여러개의 프로그램을 돌린다.
+
 parallel : multiprocess 여러개의 CPU로 하나의 프로그램을 돌린다.
 
 **Critical Section(임계 영역) 해결 조건 3가지**
@@ -109,17 +115,25 @@ parallel : multiprocess 여러개의 CPU로 하나의 프로그램을 돌린다.
 => race condition은 critical section현상을 설명하는 이론
 
 세마포어
+
 : 공유된 자원의 데이터를 여러 프로세스, 스레드가 접근하는 것을 막음.
+
 특징 : 동시에 접근할 수 있는 허용 가능한 갯수를 가지고 있는 Counter가 있음
-ex) 공용화장실에 칸이 4개일때 4칸이 비어있으면 기다릴 필요가 없음. 칸이 모두 차있으면 대기
+
+   ex) 공용화장실에 칸이 4개일때 4칸이 비어있으면 기다릴 필요가 없음. 칸이 모두 차있으면 대기
+
 문제점 : 소유가 불가능 -> 세마포어를 소유하지 않은 스레드가 세마포어를 해제가능
 
 뮤텍스
+
 : 공유된 자원의 데이터를 여러 프로세스, 스레드가 접근하는 것을 막음.
+
 세마포어랑 비슷한데 갯수가 1개 & key가 존재.
+
 : 일종의 Locking메커니즘 공유된 자원에 대한 접근을 조율하기 위해서 locking과 unlocking을 사용. lock에 대한 소유권이 있으며, lock을 가지고 있을 경우에만 공유 자원에 접근이 가능하고 lock을 가진 사람만 반납이 가능하다.
 
 모니터
+
 : 뮤텍스와 환경변수를 가지고 있는 동기화 매커니즘(?)
 
 => 뮤텍스와 세마포어 모두 완벽하지 않음. 기법을 사용하더라도 데이터 무결성을 보장할 수 없고 데드락이 발생할 수도 있다.
@@ -130,9 +144,6 @@ ex) 공용화장실에 칸이 4개일때 4칸이 비어있으면 기다릴 필�
  - Progress(진행) :  critical section에 실행중인 process가 없을때 별도의 동작이 없는 프로세스 들만 critical section에 집입할 수 있다.
  - Bounded Waiting(한정된 대기) : 진입 신청 후 부터 진입까지의 waiting이 제한적이여야한다.
 
- - Mutual exclusion(상호 배제) : 한 프로세스가 공유자원을 접근하는 critical section을 수행중일때는 다른 프로세스가 공유자원에 접근할 수 없다.
- - Progress(진행) :  critical section에 실행중인 process가 없을때 별도의 동작이 없는 프로세스 들만 critical section에 집입할 수 있다.
- - Bounded Waiting(한정된 대기) : 진입 신청 후 부터 진입까지의 waiting이 제한적이여야한다.
 
 
 --------------------------------------------------------------------------------------------------------
