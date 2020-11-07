@@ -274,7 +274,6 @@ parallel : multiprocess 여러개의 CPU로 하나의 프로그램을 돌린다.
   
 ## DFS/BFS
 
-  코딩테스트에서 난이도 높은 문제로 그래프 탐색이 많이 나옴! DFS함수와 BFS함수는 바로 짤 수 있을 만큼 익힐것!
  
   ### DFS(Depth First Search : 깊이 우선 탐색)
   
