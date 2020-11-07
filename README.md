@@ -34,7 +34,7 @@ Running(실행)/
 Waiting(대기)/
 Terminated(종료)
 
-**Thread(스레드)**
+## Thread(스레드)
 
 : 프로세스의 실행 단위
 
