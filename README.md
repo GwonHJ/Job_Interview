@@ -75,29 +75,23 @@ Context Switching의 비용은 프로세스가 스레드보다 더 많이 든다
 
 race condition(경쟁 상태) : 두 개이상의 스레드가 공유된 자원에 접근하려고 할 때, 동기화 메커니즘이 없이 접근하려는 상황
 
-ex) counter++를 실행할때, 어셈블리어는 3단계를 거쳐야함
+	ex) counter++를 실행할때, 어셈블리어는 3단계를 거쳐야함
 
-register1 = counter
-register1 = register1 + 1
-counter = register
+	register1 = counter
+	register1 = register1 + 1
+	counter = register
 
-만약 counter++, counter--를 동시에 실행한다고 했을때, counter의 초기값이 5라면 결과값이 5가 되어야함.
+	만약 counter++, counter--를 동시에 실행한다고 했을때, counter의 초기값이 5라면 결과값이 5가 되어야함.
 
-but,
+	but,
+	register1 = counter		//register1 = 5
+	register2 = counter		//register2 = 5
+	register 1 = register1 + 1	//register1 = 6
+	register 2 = register2 - 1	//register2 = 4
+	counter = register1		//counter = 6
+	counter = register2		//counter = 4
 
-register1 = counter	register1 = 5
-
-register2 = counter	register2 = 5
-
-register 1 = register1 + 1	register1 = 6
-
-register 2 = register2 - 1	register2 = 4
-
-counter = register1	counter = 6
-
-counter = register2	counter = 4
-
-위와 같이 잘못된 결과가 나올 수 있음. 이를 해결하기 위해서 동기화가 필요로 함.
+	위와 같이 잘못된 결과가 나올 수 있음. 이를 해결하기 위해서 동기화가 필요로 함.
 
 critical section(임계 영역) : 공유되는 자원에서 문제가 발생하지 않도록 독점을 보장해주는 영역
 
