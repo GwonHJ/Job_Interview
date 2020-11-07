@@ -144,7 +144,7 @@ parallel : multiprocess 여러개의 CPU로 하나의 프로그램을 돌린다.
 => critical section문제를 해결하기 위한 프로그래밍 기법이 synchronization
 => race condition은 critical section현상을 설명하는 이론
 
-세마포어
+**세마포어**
 
 : 공유된 자원의 데이터를 여러 프로세스, 스레드가 접근하는 것을 막음.
 
@@ -154,7 +154,7 @@ parallel : multiprocess 여러개의 CPU로 하나의 프로그램을 돌린다.
 
 문제점 : 소유가 불가능 -> 세마포어를 소유하지 않은 스레드가 세마포어를 해제가능
 
-뮤텍스
+**뮤텍스**
 
 : 공유된 자원의 데이터를 여러 프로세스, 스레드가 접근하는 것을 막음.
 
@@ -162,17 +162,15 @@ parallel : multiprocess 여러개의 CPU로 하나의 프로그램을 돌린다.
 
 : 일종의 Locking메커니즘 공유된 자원에 대한 접근을 조율하기 위해서 locking과 unlocking을 사용. lock에 대한 소유권이 있으며, lock을 가지고 있을 경우에만 공유 자원에 접근이 가능하고 lock을 가진 사람만 반납이 가능하다.
 
-모니터
+**모니터**
 
 : 뮤텍스와 환경변수를 가지고 있는 동기화 매커니즘(?)
 
 => 뮤텍스와 세마포어 모두 완벽하지 않음. 기법을 사용하더라도 데이터 무결성을 보장할 수 없고 데드락이 발생할 수도 있다.
 
-인터럽트
 
- - Mutual exclusion(상호 배제) : 한 프로세스가 공유자원을 접근하는 critical section을 수행중일때는 다른 프로세스가 공유자원에 접근할 수 없다.
- - Progress(진행) :  critical section에 실행중인 process가 없을때 별도의 동작이 없는 프로세스 들만 critical section에 집입할 수 있다.
- - Bounded Waiting(한정된 대기) : 진입 신청 후 부터 진입까지의 waiting이 제한적이여야한다.
+
+## 인터럽트
 
 
 
