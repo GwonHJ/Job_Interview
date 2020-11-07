@@ -28,10 +28,10 @@
 
 **프로세스 상태**
 
-new(생성)
-Ready(준비)
-Running(실행)
-Waiting(대기)
+new(생성)/
+Ready(준비)/
+Running(실행)/
+Waiting(대기)/
 Terminated(종료)
 
 **Thread(스레드)**
