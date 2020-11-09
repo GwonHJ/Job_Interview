@@ -1,4 +1,4 @@
-# Job_Interview 직무면접 대비용
+# Job_Interview SW직무면접 대비용
 
 1. 운영체제(Operating System)
 	1. 프로세스 & 스레드(Process & Thread)
