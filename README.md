@@ -255,7 +255,17 @@ parallel : multiprocess 여러개의 CPU로 하나의 프로그램을 돌린다.
  - 장점 : 구현이 쉽다. 공간적 효율이 좋다. 버블정렬과 시간복잡도는 같지만, 실제로 측정하면 버블보다는 조금 더 빠른 정렬방식
  - 단점 : 시간복잡도가 O(n^2) → 오래걸림
  - 시간복잡도 : O(n^2)
- 
+ ```java
+ for (int j = i + 1; j < arr.length; j++) {
+            if (arr[j] < arr[indexMin]) {
+                indexMin = j;
+            }
+        }
+        temp = arr[indexMin];
+        arr[indexMin] = arr[i];
+        arr[i] = temp;
+	}
+```
 **2. 버블 정렬(Bubble Sort)**
  - 장점 : 구현이 쉽다. 코드가 직관적이다.
  - 단점 : 비효율적이다. 최악이든 최선이든 O(n^2)의 시간복잡도를 가짐
