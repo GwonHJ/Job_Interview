@@ -255,16 +255,19 @@ parallel : multiprocess 여러개의 CPU로 하나의 프로그램을 돌린다.
  - 장점 : 구현이 쉽다. 공간적 효율이 좋다. 버블정렬과 시간복잡도는 같지만, 실제로 측정하면 버블보다는 조금 더 빠른 정렬방식
  - 단점 : 시간복잡도가 O(n^2) → 오래걸림
  - 시간복잡도 : O(n^2)
- ```java
- for (int j = i + 1; j < arr.length; j++) {
-            if (arr[j] < arr[indexMin]) {
+```java
+for (int i = 0; i < arr.length-1; i++) {        // 1.
+        indexMin = i;
+        for (int j = i + 1; j < arr.length; j++) {  // 2.
+            if (arr[j] < arr[indexMin]) {           // 3.
                 indexMin = j;
             }
         }
+        // 4. swap(arr[indexMin], arr[i])
         temp = arr[indexMin];
         arr[indexMin] = arr[i];
         arr[i] = temp;
-	}
+  }
 ```
 **2. 버블 정렬(Bubble Sort)**
  - 장점 : 구현이 쉽다. 코드가 직관적이다.
@@ -272,11 +275,16 @@ parallel : multiprocess 여러개의 CPU로 하나의 프로그램을 돌린다.
  - 시간복잡도 : O(n^2)
 
 ```java
-if(arr[j-1] > arr[j]){
-	temp = arr[j-1];
-	arr[j-1] = arr[j];
-	arr[j] = temp;
-}
+for(int i = 0; i < arr.length; i++) {       // 1.
+		for(int j= 1 ; j < arr.length-i; j++) { // 2.
+			if(arr[j-1] > arr[j]) {             // 3.
+                // swap(arr[j-1], arr[j])
+				temp = arr[j-1];
+				arr[j-1] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
 ```
 
 **3. 퀵 정렬(Quick Sort)**
