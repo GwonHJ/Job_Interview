@@ -542,7 +542,8 @@ bool visited[N];
     - 스프링은 확장성이 높음
 4. Spring MVC구조의 처리과정
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b11ca52c-06dd-4769-a101-cdfce09feecb/Spring_MVC_.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b11ca52c-06dd-4769-a101-cdfce09feecb/Spring_MVC_.png)
+    ![Spring MVC 구조](https://user-images.githubusercontent.com/45057466/125324171-9c233380-e37a-11eb-8c1f-e6de1d3a95f2.png)
+
 
     - DispatcherServlet : 애플리케이션으로 들어오는 모든 Request를 받는 관문
 
