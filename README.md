@@ -614,6 +614,8 @@ bool visited[N];
     - Service : 서비스영역
     - Repository : DAO
 
+
+Android 할것!!
 참고
 
 [https://geminihoroscope.tistory.com/90](https://geminihoroscope.tistory.com/90)
