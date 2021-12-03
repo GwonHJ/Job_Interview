@@ -618,7 +618,7 @@ bool visited[N];
 Android 할것!!
 
  - 4대 구성요소
- - 
+ - Life Cycle
 참고
 
 [https://geminihoroscope.tistory.com/90](https://geminihoroscope.tistory.com/90)
