@@ -37,10 +37,14 @@ Application(7Layer)에 가까워질 수록 실제 프로그램에 가까워지�
 
 
 
-# . TCP/IP란?
-인터넷에서 컴퓨터들이 서로 정보를 주고 받는데 쓰이는 통신 규약의 모음.
-
+# 2. TCP/IP란?
+현재 인터넷에서 컴퓨터들이 서로 정보를 주고 받는데 쓰이는 통신하는데 가장 기반이 되는 프로토콜.
 인터넷 프로토콜 중 TCP와 IP를 가장 많이 쓰기 때문에 TCP/IT Protocol 로 불림.
+
+       Application Layer        (4 Layer) : 응용 계층
+       Transport Layer          (3 Layer) : 전송 계층
+       Internet Layer           (2 Layer) : 인터넷 계층
+       Network Access Layer     (1 Layer) : 네트워크 엑세스 계층
 
 - IP : 인터넷 프로토콜
 
@@ -53,6 +57,16 @@ TCP IP위에서 동작하는 프로토콜로, 데이터 전달을 보증하고 �
 => IP주소 체계를 따르고 IP Routing을 이용해 목적지에 도달. TCP의 특성을 활용해 송신자와 수신자의 논리적 연결을 생성하고 신뢰성을 유지하도록 한다.
 
 
+### 계층별 간단 요약
+
+- Application Layer(4 Layer, 응용계층) : TCP/UDP 기반의 응용 프로그램을 구현할 때 사용됩니다. (ex : HTTP, SSH 등)
+- Transport Layer(3 Layer, 전송계층) : 통신 노드 간의 연결을 제어하고, 신뢰성 있는 데이터 전송을 담당합니다. (TCP, UDP)
+- Internet Layer (2 Layer, 인터넷계층) : 통신 노드 간의 IP패킷을 전송하는 기능과 라우팅 기능을 담당
+- Network Access Layer (1 Layer, 네트워크 엑세스 계층) : 물리적인 주소로 MAC를 사용. (ex : LAN, 패킷망)
+
+
+
+# 3. TCP VS UDP
 
 
 
