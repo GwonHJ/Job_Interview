@@ -1,0 +1,32 @@
+# 자동차 통신시스템의 이해
+
+
+### 전장 도메인
+
+- Body Domain : 편의성 제공
+- Chassis Domain : 주행 안전 보장
+- Powertrain Domain : 주기능(움직이는)
+- Infotainment Domain : (자동차 조작과 관련없는) 부가 기능
+ 
+ 
+ + multimedia Domain : 통신x (자동차 조작과 관련없는) 부가 기능
+
+
+### 배터리 종류
+
+IGN : 완전히 시동걸면 발전 (엔진)
+B+ : 완전 시동x (배터리) ex)스마트키
+ACC : 시동을 1단 했을때 (배터리) ex) 오디오
+
+
+### 자율주행 단계
+
+level 0 : x
+level 1 : 운전 보조 기능 탑재 ex)후방카메라
+level 2 : 가속, 조향 등 일부 기능 자동화 ex) 레인키핑, 크루즈컨트롤
+level 3 : 고속도로 정도 주행 (빠져나가는건 x) ex)성능 좋은 adas
+level 4 : 운전 가능 ex) 일반도로 가능
+level 5 : 완전 자율주행
+
+
+## 프로토콜
